@@ -6,7 +6,7 @@
   <description>Sample launch scripts for bringing up multi-robot environment</description>
   <maintainer email="mateuszzembron@gmail.com">Mateusz Zembron</maintainer>
   <license>Apache-2.0</license>
-
+<!-- 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>nav2_common</build_depend>
 
@@ -28,5 +28,23 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+  </export> -->
+    <depend>gazebo_ros_pkgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2</depend>
+  <depend>turtlebot3_navigation2</depend>
+  <build_depend>nav2_common</build_depend>
+  <build_depend>navigation2</build_depend>
+  <build_depend>launch_ros</build_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>nav2_common</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
   </export>
 </package>
