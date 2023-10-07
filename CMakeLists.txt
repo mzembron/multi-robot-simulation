@@ -27,7 +27,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 ################################################################################
 # Install
 ################################################################################
-install(DIRECTORY launch config models rviz urdf worlds params
+install(DIRECTORY launch config models rviz urdf worlds params maps
   DESTINATION share/${PROJECT_NAME}/
 )
 

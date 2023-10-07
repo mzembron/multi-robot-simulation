@@ -89,7 +89,7 @@ def generate_launch_description():
 
     world = os.path.join(
         get_package_share_directory('multi_robot_simulation'),
-        'worlds', 'multi_robot_world.world')
+        'worlds', 'masters_world.world')
 
     gzserver_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -125,7 +125,10 @@ def generate_launch_description():
         executable='map_server',
         name='map_server',
         output='screen',
-        parameters=[{'yaml_filename': os.path.join(get_package_share_directory('turtlebot3_navigation2'), 'map', 'map.yaml'),
+        # parameters=[{'yaml_filename': os.path.join(get_package_share_directory('turtlebot3_navigation2'), 'map', 'map.yaml'),
+        #              },],
+        #TODO: figure out why full path does not work:
+                parameters=[{'yaml_filename': os.path.join('/home/mateusz/thesis_ws/src/multi-robot-simulation/maps/map_1696284787.yaml'),
                      },],
         remappings=remappings)
 
