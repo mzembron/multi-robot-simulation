@@ -12,3 +12,6 @@ SLAM for map scanning:
 
 Saving map to file
 `ros2 run nav2_map_server map_saver_cli -f <file-name>`
+
+Start multiple turtlebots:
+ros2 launch multi_robot_simulation spawn_gazebo_nav.py
